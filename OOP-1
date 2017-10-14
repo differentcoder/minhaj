@@ -1,0 +1,30 @@
+<?php 
+// test minhaj program;
+class minhaj{
+    
+    public $mname="Minhajul Islam";
+    public $mage="80";
+    public $memail="minhajcmtt@gmail.com";
+    
+    public function minhajName(){
+        echo "My Name Is: ". $this->mname;
+        echo '<br>';
+    }
+    public function minhajAge(){
+        echo "My Age  Is: ". $this-> mage;
+        echo '<br>';
+    }
+    public function minhajemail(){
+        echo "My eMail Address Is: ". $this->memail;
+        echo '<br>';
+    }
+}
+
+$minhajObject = new minhaj();
+
+echo $minhajObject->minhajName();
+echo $minhajObject->minhajAge();
+echo $minhajObject->minhajemail();
+
+
+?>
