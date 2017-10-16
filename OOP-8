@@ -1,0 +1,31 @@
+
+<?php 
+
+class UserData{
+	public $user;
+	public $userId;
+	public function __construct($userName, $userId){
+		     $this->user = $userName;
+			 $this->userId = $userId;
+	}
+	public function Display(){
+		echo "User Name is :{$this->user} and User Id is : {$this->userId}";
+	}
+}
+class Admin  extends UserData{
+	public $level = "Administrator";
+	public function Display(){
+		echo "User Name is :{$this->user} and User Id is : {$this->userId} and the level is {$this->level}";
+	}
+}
+
+ $user = "Minhaj";
+ $id = "15";
+ $user = new UserData($user, $id);
+ echo "<br>";
+ $user = "Mehedi";
+ $id = "1";
+ $ad = new Admin($user, $id);
+ $ad->Display();
+ 
+?>
