@@ -1,0 +1,29 @@
+
+<?php 
+
+class UserData{
+	public $user;
+	public $userId;
+	const NAMe = "Md.Minhajul Islam";
+	public function __construct($userName, $userId){
+		     $this->user = $userName;
+			 $this->userId = $userId;
+			 echo "User Name is :{$this->user} and User Id is : {$this->userId}";
+	}
+	public function Display(){
+		
+		echo "The full name  is : ".UserData::NAMe;
+	}
+	public function __destruct(){
+		
+		unset($this->user);
+		unset($this->userId);
+	
+	}
+}
+ $user = "Mehedi";
+ $id = "15";
+ $user = new UserData($user, $id);
+ echo "<br>";
+ $user->Display();
+?>
