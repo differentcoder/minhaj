@@ -1,0 +1,31 @@
+
+<?php 
+class UserData{
+	public $user;
+	public $userId;
+	const NAME = "Md.Minhajul Islam"; // const const_name
+	public  static $age = "88"; // staric data variabel
+	public function __construct($userName, $userId){
+		   $this->user = $userName;
+			 $this->userId = $userId;
+			 echo "User Name is :{$this->user} and User Id is : {$this->userId}";
+	}
+	public static function Display(){
+		echo "The full name  is : ".UserData::NAME ."<br>";
+		echo "The new age is :".self::$age;
+	}
+	public function __destruct(){
+		unset($this->user);
+		unset($this->userId);
+	}
+}
+
+ $user = "Mehedi";
+ $id = "15";
+ $user = new UserData($user, $id);
+ echo "<br>";
+ //$user->Display();
+ UserData::Display();
+ 
+ 
+?>
