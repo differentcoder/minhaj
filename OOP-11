@@ -1,0 +1,57 @@
+<?php 
+//interface
+
+interface School{
+	public function mySchool();
+}
+interface College{
+	public function myCollege();
+}
+interface Varsity {
+	public function myVersity();
+}
+
+class Teacher implements School,College,Varsity{
+	public function __construct(){
+		$this->mySchool();
+		$this->myCollege();
+		$this->myVersity();
+	}
+	public function mySchool(){
+		echo "I am a school teacher";
+		echo "</br>";
+	}
+	public function myCollege(){
+		echo "I am a college teacher";
+		echo "</br>";
+	}
+	public function myVersity(){
+		echo "I am a versity teacher";
+		echo "</br>";
+	}
+} 
+
+class Student implements School,College,Varsity{
+	public function __construct(){
+		$this->mySchool();
+		$this->myCollege();
+		$this->myVersity();
+	}
+	public function mySchool(){
+		echo "I am a school Student";
+		echo "</br>";
+	}
+	public function myCollege(){
+		echo "I am a college Student";
+		echo "</br>";
+	}
+	public function myVersity(){
+		echo "I am a versity Student";
+		echo "</br>";
+	}
+} 
+
+
+$teaacher = new Teacher(); 
+$student = new Student(); 
+?>
