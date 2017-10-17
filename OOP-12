@@ -1,0 +1,27 @@
+<?php 
+//Abstract Class
+abstract class Student{
+	public $name;
+	public $age;
+	public function details(){
+		echo $this->name. " is " .$this->age ." Years Old ";
+	}
+	 abstract public function School();
+}
+
+class Boy extends Student{
+	public function describe(){
+		return parent::details()."And I am a high school student.  </br>";
+	}
+	public function School(){
+		return "I Link to read sroy Book </br>";
+	}
+}
+
+$student = new Boy();
+$student ->name="Minhaj";
+$student ->age="23";
+echo $student -> describe();
+echo $student -> School();
+
+?>
