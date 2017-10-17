@@ -1,0 +1,35 @@
+<?php 
+//Magic Methods
+
+/*
+__construct()
+__destruct()
+__get($property)
+__set($property,$value)
+__call($method,$arg_array)
+*/
+
+class Student{ 
+	public function describe(){
+		echo "I am a student.</br>";
+	}
+	public function __get($pm){
+		echo "$pm does not exist</br>";
+	}
+	
+	public function __set($pm, $value){
+		echo "we set $pm $value";
+	}
+	
+	public function __call($pm, $value){
+		echo 'There is no'.$pm.'method and agruments:'.implode(',',$value);
+	}
+}
+
+$student = new Student();
+$student->describe();
+$student->Minhaj;
+$student->age=23;
+$student->notExistMethod('2','5','9');
+
+?>
