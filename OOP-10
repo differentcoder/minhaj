@@ -1,0 +1,13 @@
+---
+Access Modifers
+- Public //inside class+ in the sub class
+- private // only class using
+- protected //
+
+====
+Polymorphism
+Note : The Basis of polymorphism is Inheritance and overridden methods
+key= instanceof
+if($admin instanceof userdata){
+	echo "inheritenc"
+}
