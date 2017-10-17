@@ -1,0 +1,8 @@
+Preventing from Extending & Overriding using final keyword
+
+final class class_name{
+	public final function display(){
+		
+	}
+
+}
