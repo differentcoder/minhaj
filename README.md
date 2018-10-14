@@ -1,2 +1,2 @@
 # minhaj
-minhaj program
+Object-oriented programming (OOP) - Student Class 
